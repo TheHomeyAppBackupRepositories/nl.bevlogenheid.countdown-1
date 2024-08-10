@@ -4,7 +4,7 @@
     "en": "CountDown",
     "nl": "CountDown"
   },
-  "version": "3.0.6",
+  "version": "3.1.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "description": {
@@ -81,6 +81,40 @@
             "placeholder": {
               "en": "Countdown timer name",
               "nl": "Zandloper naam"
+            }
+          }
+        ]
+      },
+      {
+        "id": "countdown_reaches_number",
+        "title": {
+          "en": "Timer [[variable]] reaches [[value]] seconds",
+          "nl": "Zandloper [[variable]] heeft nog [[value]] seconden"
+        },
+        "token": [
+          {
+            "name": "variable",
+            "title": {
+              "en": "Name timer",
+              "nl": "Naam zandloper"
+            }
+          }
+        ],
+        "args": [
+          {
+            "name": "variable",
+            "type": "autocomplete",
+            "placeholder": {
+              "en": "Countdown timer name",
+              "nl": "Zandloper naam"
+            }
+          },
+          {
+            "name": "value",
+            "type": "number",
+            "placeholder": {
+              "en": "value",
+              "nl": "waarde"
             }
           }
         ]
@@ -246,8 +280,8 @@
       {
         "id": "timer_matches_number",
         "title": {
-          "en": "!{{CountDown is exact|Countdown is not exactly}}",
-          "nl": "!{{Zandloper is precies|Zandloper is ongelijk aan}}"
+          "en": "!{{CountDown [[variable]] is exact|Countdown [[variable]] is not exactly}} [[value]] seconds",
+          "nl": "!{{Zandloper [[variable]] is precies|Zandloper [[variable]] is ongelijk aan}} [[value]] seconden"
         },
         "args": [
           {
@@ -271,8 +305,8 @@
       {
         "id": "timer_less_than_number",
         "title": {
-          "en": "!{{CountDown is less than|Countdown is not less than}}",
-          "nl": "!{{Zandloper is kleiner dan|Zandloper is niet kleiner dan}}"
+          "en": "!{{CountDown [[variable]] is less than|Countdown [[variable]]is not less than}} [[value]] seconds",
+          "nl": "!{{Zandloper [[variable]] is kleiner dan|Zandloper [[variable]] is niet kleiner dan}} [[value]] seconden"
         },
         "args": [
           {
@@ -296,8 +330,8 @@
       {
         "id": "timer_greater_than_number",
         "title": {
-          "en": "!{{CountDown is greater than|Countdown is not greater than}}",
-          "nl": "!{{Zandloper is groter dan|Zandloper is niet groter dan}}"
+          "en": "!{{CountDown [[variable]] is greater than|Countdown [[variable]] is not greater than}} [[value]] seconds",
+          "nl": "!{{Zandloper [[variable]] is groter dan|Zandloper [[variable]] is niet groter dan}} [[value]] seconden"
         },
         "args": [
           {
@@ -340,8 +374,8 @@
       {
         "id": "set_countdown_timer",
         "title": {
-          "en": "Start countdown timer",
-          "nl": "Start zandloper"
+          "en": "Start countdown timer [[variable]] with [[value]] seconds",
+          "nl": "Start zandloper [[variable]] met [[value]] seconden"
         },
         "args": [
           {
@@ -365,8 +399,8 @@
       {
         "id": "set_random_countdown_timer",
         "title": {
-          "en": "start random CountDown",
-          "nl": "Zandloper met willekeurige eindtijd"
+          "en": "start random CountDown [[variable]], minimal [[valuemin]] seconds, maximum [[valuemax]]",
+          "nl": "Zandloper met willekeurige eindtijd [[variable]], minimaal [[valuemin]] seconden, maximaal [[valuemax]]"
         },
         "args": [
           {
@@ -398,8 +432,8 @@
       {
         "id": "adjust_countdown_timer",
         "title": {
-          "en": "Adjust countdown timer",
-          "nl": "Pas zandloper aan"
+          "en": "Adjust countdown timer [[variable]] with [[value]] seconds",
+          "nl": "Pas zandloper [[variable]] with [[value]] seconden"
         },
         "args": [
           {
